@@ -10,6 +10,9 @@ jobs:
   scrape:
     name: Scrape
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        state: [ca, ia, ny]
     steps:
       - name: Hello world
         run: echo "Scraping data for ${{ inputs.state }}"
